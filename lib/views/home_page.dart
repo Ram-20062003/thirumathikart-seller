@@ -16,6 +16,19 @@ class HomePage extends GetView<HomeController> {
           children: [
             ElevatedButton(
               onPressed: () {
+                Get.toNamed(NavigationRoutes.loginRoute, arguments: Product());
+              },
+              child: const Text('Login'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(NavigationRoutes.profileRoute,
+                    arguments: Product());
+              },
+              child: const Text('Profile'),
+            ),
+            ElevatedButton(
+              onPressed: () {
                 Get.toNamed(NavigationRoutes.editProduct,
                     arguments: Product(
                         name: 'product_name',
